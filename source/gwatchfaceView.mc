@@ -5,9 +5,11 @@ import Toybox.System;
 import Toybox.WatchUi;
 
 class gwatchfaceView extends WatchUi.WatchFace {
+    private var timeFont;
 
     function initialize() {
         WatchFace.initialize();
+        timeFont = Application.loadResource(Rez.Fonts.TimeFont);
     }
 
     // Load your resources here
@@ -23,29 +25,27 @@ class gwatchfaceView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Get the current time and format it correctly
-        var timeFormat = "$1$:$2$";
-        var clockTime = System.getClockTime();
-        var hours = clockTime.hour;
-        if (!System.getDeviceSettings().is24Hour) {
-            if (hours > 12) {
-                hours = hours - 12;
-            }
-        } else {
-            if (getApp().getProperty("UseMilitaryFormat")) {
-                timeFormat = "$1$$2$";
-                hours = hours.format("%02d");
-            }
-        }
-        var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
-
-        // Update the view
-        var view = View.findDrawableById("TimeLabel") as Text;
-        view.setColor(getApp().getProperty("ForegroundColor") as Number);
-        view.setText(timeString);
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        drawTime(dc);
+    }
+
+    function drawTime(dc) {
+      var clockTime = System.getClockTime();
+      var hour = clockTime.hour;
+
+      var timeString = Lang.format("$1$$2$", [hour, clockTime.min.format("%02d")]);
+
+      dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
+      dc.drawText(
+        dc.getWidth() / 2,
+        dc.getHeight() / 2 + 16,
+        timeFont,
+        timeString,
+        Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER 
+      );
     }
 
     // Called when this View is removed from the screen. Save the

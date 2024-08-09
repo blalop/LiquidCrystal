@@ -21,11 +21,6 @@ class gwatchfaceApp extends Application.AppBase {
         return [ new gwatchfaceView() ];
     }
 
-    // New app settings have been received so trigger a UI update
-    function onSettingsChanged() as Void {
-        WatchUi.requestUpdate();
-    }
-
 }
 
 function getApp() as gwatchfaceApp {
