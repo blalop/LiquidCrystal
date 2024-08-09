@@ -41,7 +41,7 @@ class gwatchfaceView extends WatchUi.WatchFace {
 
       dc.drawText(
         dc.getWidth() / 2,
-        dc.getHeight() / 2 + 16,
+        dc.getHeight() / 2 + 10,
         timeFont,
         timeString,
         Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER 
