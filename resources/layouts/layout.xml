@@ -1,7 +1,7 @@
 <layout id="WatchFace">
     <drawable id="Background" class="Background" />
-    <label id="Time" x="center" y="center" font="@Fonts.TimeFont" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Date" x="50%" y="10%" font="@Fonts.TimeFont" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Weather" x="50%" y="80%" font="@Fonts.TimeFont" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-
+    <label id="Time" x="center" y="center" font="@Fonts.Time" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
+    <label id="WeekDay" x="30%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
+    <label id="Day" x="70%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
+    <label id="Weather" x="50%" y="80%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
 </layout>

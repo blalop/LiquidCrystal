@@ -10,7 +10,7 @@ class Background extends WatchUi.Drawable {
     }
 
     function draw(dc as Dc) as Void {
-        dc.setColor(Graphics.COLOR_TRANSPARENT, Graphics.COLOR_BLACK);
+        dc.setColor(Graphics.COLOR_TRANSPARENT, 0xB3C4C6);
         dc.clear();
     }
 

@@ -9,11 +9,9 @@ import Toybox.Weather;
 using Toybox.Time.Gregorian as Calendar;
 
 class GWatchView extends WatchUi.WatchFace {
-    private var _timeFont;
 
     function initialize() {
         WatchFace.initialize();
-        _timeFont = Application.loadResource(Rez.Fonts.TimeFont);
     }
 
     function onLayout(dc as Dc) as Void {
@@ -43,13 +41,16 @@ class GWatchView extends WatchUi.WatchFace {
       var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
       var view = View.findDrawableById("Time") as Text;
       view.setText(timeString);
-
     }
 
     private function drawDate(dc, date) {
-      var dateString = Lang.format("$1$", [date.day]);
-      var view = View.findDrawableById("Date") as Text;
-      view.setText(dateString);
+      var dayString = date.day.toString();
+      var dayView = View.findDrawableById("Day") as Text;
+      dayView.setText(dayString);
+
+      var weekDayString = date.day_of_week.substring(0, 2).toUpper();
+      var weekDayView = View.findDrawableById("WeekDay") as Text;
+      weekDayView.setText(weekDayString);
     }
 
     private function drawWeather(dc, temperature) {
