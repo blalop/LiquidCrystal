@@ -1,5 +1,5 @@
 <layout id="WatchFace">
-    <drawable id="Background" class="Background" />
+    <drawable id="LiquidCrystalBackground" class="LiquidCrystalBackground" />
     <label id="Time" x="center" y="center" font="@Fonts.Time" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
     <label id="WeekDay" x="30%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
     <label id="Day" x="70%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />

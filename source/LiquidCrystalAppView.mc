@@ -8,7 +8,7 @@ import Toybox.Weather;
 
 using Toybox.Time.Gregorian as Calendar;
 
-class GWatchView extends WatchUi.WatchFace {
+class LiquidCrystalView extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
