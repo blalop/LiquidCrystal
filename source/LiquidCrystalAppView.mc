@@ -25,7 +25,7 @@ class LiquidCrystalView extends WatchUi.WatchFace {
         View.onUpdate(dc);
         drawTime(dc, System.getClockTime());
         drawDate(dc, Calendar.info(Time.now(), Time.FORMAT_LONG));
-        drawWeather(dc, Weather.getCurrentConditions().feelsLikeTemperature);
+        drawData(dc, Weather.getCurrentConditions(), System.getSystemStats());
     }
 
     function onHide() as Void {
@@ -53,10 +53,14 @@ class LiquidCrystalView extends WatchUi.WatchFace {
       weekDayView.setText(weekDayString);
     }
 
-    private function drawWeather(dc, temperature) {
-      var temperatureString = temperature.format("%d");
-      var view = View.findDrawableById("Weather") as Text;
-      view.setText(temperatureString);
+    private function drawData(dc, weather, system) {
+      var temperatureString = Lang.format("$1$C", [weather.feelsLikeTemperature.format("%d")]);
+      var temperatureView = View.findDrawableById("Temperature") as Text;
+      temperatureView.setText(temperatureString);
+
+      var batteryString = Lang.format("$1$%", [system.battery.format("%d")]);
+      var batteryView = View.findDrawableById("Battery") as Text;
+      batteryView.setText(batteryString);
     }
 
 }
