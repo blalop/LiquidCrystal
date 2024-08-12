@@ -1,3 +1,4 @@
+import Toybox.Application;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
@@ -23,6 +24,10 @@ class LiquidCrystalDate extends WatchUi.Drawable {
     }
 
     function draw(dc as Dc) as Void {
+        if (!Properties.getValue("showDate")) {
+            return;
+        }
+
         var date = Calendar.info(Time.now(), Time.FORMAT_SHORT);
         var string = Lang.format("$1$/$2$/$3$", [
             date.day,

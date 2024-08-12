@@ -1,12 +1,12 @@
 <layout id="WatchFace">
-    <drawable id="LiquidCrystalBackground" class="LiquidCrystalBackground" />
+    <drawable id="LiquidCrystalBackground" class="LiquidCrystalBackground"/>
 
     <drawable id="Time" class="LiquidCrystalTime">
         <param name="x">dc.getWidth() / 2</param>
         <param name="y">dc.getHeight() / 2</param>
     </drawable>
 
-    <drawable id="Weekday" class="LiquidCrystalWeekday">
+    <drawable id="DayOfWeek" class="LiquidCrystalDayOfWeek">
         <param name="x">0.25 * dc.getWidth()</param>
         <param name="y">0.3 * dc.getHeight()</param>
     </drawable>

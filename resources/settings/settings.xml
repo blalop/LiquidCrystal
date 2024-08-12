@@ -1,0 +1,9 @@
+<settings>
+    <setting propertyKey="@Properties.showDayOfWeek" title="@Strings.SettingsShowDayOfWeek">
+        <settingConfig type="boolean" required="true"/>
+    </setting>
+
+    <setting propertyKey="@Properties.showDate" title="@Strings.SettingsShowDate">
+        <settingConfig type="boolean" required="true"/>
+    </setting>
+</settings>

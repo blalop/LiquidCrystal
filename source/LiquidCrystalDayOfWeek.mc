@@ -4,7 +4,7 @@ import Toybox.WatchUi;
 
 using Toybox.Time.Gregorian as Calendar;
 
-class LiquidCrystalWeekday extends WatchUi.Drawable {
+class LiquidCrystalDayOfWeek extends WatchUi.Drawable {
 
     private var _x;
     private var _y;

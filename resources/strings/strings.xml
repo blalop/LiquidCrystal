@@ -1,5 +1,6 @@
 <strings>
-
     <string id="AppName">Liquid Crystal</string>
 
+    <string id="SettingsShowDate">Show date</string>
+    <string id="SettingsShowDayOfWeek">Show day of week</string>
 </strings>
