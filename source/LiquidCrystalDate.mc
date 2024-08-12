@@ -29,11 +29,7 @@ class LiquidCrystalDate extends WatchUi.Drawable {
         }
 
         var date = Calendar.info(Time.now(), Time.FORMAT_SHORT);
-        var string = Lang.format("$1$/$2$/$3$", [
-            date.day,
-            date.month.format("%02d"),
-            (date.year - 2000).format("%02d")
-        ]);
+        var string = Lang.format("$1$/$2$", [date.day, date.month.format("%02d")]);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(_x, _y, _font, string, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);

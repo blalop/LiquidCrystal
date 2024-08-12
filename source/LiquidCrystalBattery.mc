@@ -1,11 +1,12 @@
 import Toybox.Application;
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.Math;
 import Toybox.WatchUi;
 
 using Toybox.Time.Gregorian as Calendar;
 
-class LiquidCrystalDayOfWeek extends WatchUi.Drawable {
+class LiquidCrystalBattery extends WatchUi.Drawable {
 
     private var _x;
     private var _y;
@@ -24,12 +25,12 @@ class LiquidCrystalDayOfWeek extends WatchUi.Drawable {
     }
 
     function draw(dc as Dc) as Void {
-        if (!Properties.getValue("showDayOfWeek")) {
+        if (!Properties.getValue("showBattery")) {
             return;
         }
 
-        var date = Calendar.info(Time.now(), Time.FORMAT_LONG);
-        var string = date.day_of_week;
+        var battery = Math.floor(System.getSystemStats().battery);
+        var string = Lang.format("$1$%", [battery.toNumber()]);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(_x, _y, _font, string, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);

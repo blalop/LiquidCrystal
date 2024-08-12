@@ -1,6 +1,7 @@
 <properties>
     <property id="AppVersion" type="string">1.0.0</property>
 
-    <property id="showDayOfWeek" type="boolean">true</property>
+    <property id="showBattery" type="boolean">true</property>
     <property id="showDate" type="boolean">true</property>
+    <property id="showDayOfWeek" type="boolean">true</property>
 </properties>

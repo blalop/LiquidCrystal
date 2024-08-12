@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Date and day of week
-- Settings for date and day of week
+- Battery (configurable)
+- Date (configurable)
+- Day of week (configurable)
 
 # ## [1.0.0](https://github.com/blalop/LiquidCrystal/tree/1.0.0)
 ### Added
