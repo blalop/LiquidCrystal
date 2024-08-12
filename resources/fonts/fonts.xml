@@ -1,5 +1,3 @@
 <fonts>
   <font id="Time" filename="time.fnt" antialias="true" />
-  <font id="Date" filename="date.fnt" antialias="true" />
-  <font id="Data" filename="data.fnt" antialias="true" />
 </fonts>

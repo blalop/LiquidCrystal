@@ -1,8 +1,9 @@
 <layout id="WatchFace">
     <drawable id="LiquidCrystalBackground" class="LiquidCrystalBackground" />
-    <label id="Time" x="center" y="center" font="@Fonts.Time" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
-    <label id="WeekDay" x="30%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
-    <label id="Day" x="70%" y="18%" font="@Fonts.Date" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
-    <label id="Temperature" x="30%" y="68%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
-    <label id="Battery" x="70%" y="68%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLACK" />
+
+    <drawable id="Time" class="LiquidCrystalTime">
+        <param name="x">dc.getWidth() / 2</param>
+        <param name="y">dc.getHeight() / 2</param>
+    </drawable>
+
 </layout>
