@@ -1,12 +1,5 @@
-import Toybox.Application;
 import Toybox.Graphics;
-import Toybox.Lang;
-import Toybox.System;
-import Toybox.Time;
 import Toybox.WatchUi;
-import Toybox.Weather;
-
-using Toybox.Time.Gregorian as Calendar;
 
 class LiquidCrystalView extends WatchUi.WatchFace {
 
