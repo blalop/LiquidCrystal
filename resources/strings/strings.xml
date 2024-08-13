@@ -4,5 +4,5 @@
     <string id="SettingsShowDate">Show date</string>
     <string id="SettingsShowDayOfWeek">Show day of week</string>
     <string id="SettingsShowBattery">Show battery percentage</string>
-    <string id="SettingsShowWeather">Show weather</string>
+    <string id="SettingsShowTemperature">Show temperature</string>
 </strings>

@@ -4,5 +4,5 @@
     <property id="showBattery" type="boolean">true</property>
     <property id="showDate" type="boolean">true</property>
     <property id="showDayOfWeek" type="boolean">true</property>
-    <property id="showWeather" type="boolean">true</property>
+    <property id="showTemperature" type="boolean">true</property>
 </properties>

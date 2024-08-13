@@ -11,7 +11,7 @@
         <settingConfig type="boolean" required="true"/>
     </setting>
 
-    <setting propertyKey="@Properties.showWeather" title="@Strings.SettingsShowWeather">
+    <setting propertyKey="@Properties.showTemperature" title="@Strings.SettingsShowTemperature">
         <settingConfig type="boolean" required="true"/>
     </setting>
 </settings>
