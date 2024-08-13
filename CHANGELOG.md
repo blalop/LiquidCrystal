@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Battery (configurable)
 - Date (configurable)
 - Day of week (configurable)
-- Weather (configurable)
+- Temperature (configurable)
 
 # ## [1.0.0](https://github.com/blalop/LiquidCrystal/tree/1.0.0)
 ### Added
