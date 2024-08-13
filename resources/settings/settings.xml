@@ -10,4 +10,8 @@
     <setting propertyKey="@Properties.showDayOfWeek" title="@Strings.SettingsShowDayOfWeek">
         <settingConfig type="boolean" required="true"/>
     </setting>
+
+    <setting propertyKey="@Properties.showWeather" title="@Strings.SettingsShowWeather">
+        <settingConfig type="boolean" required="true"/>
+    </setting>
 </settings>

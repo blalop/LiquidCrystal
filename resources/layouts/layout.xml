@@ -16,6 +16,11 @@
         <param name="y">0.3 * dc.getHeight()</param>
     </drawable>
 
+    <drawable id="Weather" class="LiquidCrystalWeather">
+        <param name="x">0.5 * dc.getWidth()</param>
+        <param name="y">0.05 * dc.getHeight()</param>
+    </drawable>
+
     <drawable id="Battery" class="LiquidCrystalBattery">
         <param name="x">0.5 * dc.getWidth()</param>
         <param name="y">0.95 * dc.getHeight()</param>

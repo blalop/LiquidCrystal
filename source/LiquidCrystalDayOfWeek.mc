@@ -11,12 +11,12 @@ class LiquidCrystalDayOfWeek extends WatchUi.Drawable {
     private var _y;
     private var _font;
     
-    typedef LiquidCrystalDateParams as {
+    typedef LiquidCrystalDayOfWeekParams as {
         :x as Float,
         :y as Float,
     };
 
-    function initialize(params as LiquidCrystalDateParams) {
+    function initialize(params as LiquidCrystalDayOfWeekParams) {
         Drawable.initialize(params);
         _x = params[:x];
         _y = params[:y];

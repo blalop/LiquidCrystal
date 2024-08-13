@@ -1,23 +1,21 @@
 import Toybox.Application;
 import Toybox.Graphics;
 import Toybox.Lang;
-import Toybox.Math;
 import Toybox.WatchUi;
+import Toybox.Weather;
 
-using Toybox.Time.Gregorian as Calendar;
-
-class LiquidCrystalBattery extends WatchUi.Drawable {
+class LiquidCrystalWeather extends WatchUi.Drawable {
 
     private var _x;
     private var _y;
     private var _font;
     
-    typedef LiquidCrystalBatteryParams as {
+    typedef LiquidCrystalWeatherParams as {
         :x as Float,
         :y as Float,
     };
 
-    function initialize(params as LiquidCrystalBatteryParams) {
+    function initialize(params as LiquidCrystalWeatherParams) {
         Drawable.initialize(params);
         _x = params[:x];
         _y = params[:y];
@@ -25,12 +23,12 @@ class LiquidCrystalBattery extends WatchUi.Drawable {
     }
 
     function draw(dc as Dc) as Void {
-        if (!Properties.getValue("showBattery")) {
+        if (!Properties.getValue("showWeather")) {
             return;
         }
 
-        var battery = Math.floor(System.getSystemStats().battery);
-        var string = Lang.format("$1$%", [battery.toNumber()]);
+        var currentConditions = Weather.getCurrentConditions();
+        var string = Lang.format("$1$C", [currentConditions.temperature.format("%02d")]);
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(_x, _y, _font, string, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
