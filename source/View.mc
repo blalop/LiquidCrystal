@@ -1,7 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 
-class LiquidCrystalView extends WatchUi.WatchFace {
+class View extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();

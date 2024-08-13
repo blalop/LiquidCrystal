@@ -2,7 +2,7 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class LiquidCrystalBackground extends WatchUi.Drawable {
+class Background extends WatchUi.Drawable {
 
     function initialize(params as Dictionary) {
         Drawable.initialize(params);

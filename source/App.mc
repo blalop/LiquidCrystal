@@ -2,7 +2,7 @@ import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
-class LiquidCrystalApp extends Application.AppBase {
+class App extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -15,11 +15,11 @@ class LiquidCrystalApp extends Application.AppBase {
     }
 
     function getInitialView() as [Views] or [Views, InputDelegates] {
-        return [ new LiquidCrystalView() ];
+        return [ new View() ];
     }
 
 }
 
-function getApp() as LiquidCrystalApp {
-    return Application.getApp() as LiquidCrystalApp;
+function getApp() as App {
+    return Application.getApp() as App;
 }

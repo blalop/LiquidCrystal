@@ -1,10 +1,24 @@
 <layout id="WatchFace">
-    <drawable id="LiquidCrystalBackground" class="LiquidCrystalBackground"/>
+    <drawable id="LiquidCrystalBackground" class="Background"/>
 
-    <label id="Battery" class="LiquidCrystalLabel" x="50%" y = "95%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE"/>
-    <label id="Date" class="LiquidCrystalLabel" x="75%" y = "30%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE"/>
-    <label id="DayOfWeek" class="LiquidCrystalLabel" x="25%" y = "30%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE"/>
-    <label id="Time" class="LiquidCrystalLabel" x="50%" y="50%" font="@Fonts.Time" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE"/>
-    <label id="Temperature" class="LiquidCrystalLabel" x="50%" y="5%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE"/>
+    <label id="Battery" class="Label" x="50%" y = "95%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
+        <param name="fieldType">Field.BATTERY</param>
+    </label>
+
+    <label id="Date" class="Label" x="75%" y = "30%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
+        <param name="fieldType">Field.DATE</param>
+    </label>
+
+    <label id="DayOfWeek" class="Label" x="25%" y = "30%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
+        <param name="fieldType">Field.DAY_OF_WEEK</param>
+    </label>
+
+    <label id="Time" class="Label" x="50%" y="50%" font="@Fonts.Time" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
+        <param name="fieldType">Field.TIME</param>
+    </label>
+
+    <label id="Temperature" class="Label" x="50%" y="5%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
+        <param name="fieldType">Field.TEMPERATURE</param>
+    </label>
 
 </layout>
