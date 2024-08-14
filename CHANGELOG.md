@@ -6,11 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+# ## [1.1.0](https://github.com/blalop/LiquidCrystal/tree/1.1.0)
 ### Added
 - Battery (configurable)
 - Date (configurable)
 - Day of week (configurable)
-- Temperature (configurable)
+- Temperature (configurable, off by default)
 
 # ## [1.0.0](https://github.com/blalop/LiquidCrystal/tree/1.0.0)
 ### Added
