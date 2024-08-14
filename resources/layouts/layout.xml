@@ -1,5 +1,5 @@
 <layout id="WatchFace">
-    <drawable id="LiquidCrystalBackground" class="Background"/>
+    <drawable id="Background" class="Background"/>
 
     <label id="Battery" class="Label" x="50%" y = "95%" font="@Fonts.Data" justification="Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER" color="Graphics.COLOR_WHITE">
         <param name="fieldType">Field.BATTERY</param>

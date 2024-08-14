@@ -11,7 +11,7 @@ class Label extends WatchUi.Drawable {
     private var _justification;
     private var _toggle;
 
-    typedef LiquidCrystalLabelParams as {
+    typedef LabelParams as {
         :identifier as String,
         :locX as Float,
         :locY as Float,
@@ -21,7 +21,7 @@ class Label extends WatchUi.Drawable {
         :fieldType as Number
     };
 
-    function initialize(params as LiquidCrystalLabelParams) {
+    function initialize(params as LabelParams) {
         Drawable.initialize(params);
         _color = params[:color];
         _font = params[:font];
